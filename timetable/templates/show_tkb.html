@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Thời Khóa Biểu</h1>
+<table class="table table-striped table-bordered table-sm">
+    
+    {% for d in weeks %}
+       
+        {% if  d%}
+            <th>{{d.0.Thu}}</th>
+           <tr>
+            {% for e in  d%}
+            
+                <td>
+                {{e.name_C}}
+                    <br>
+                {{e.name_I}}
+                    <br>
+                {{e.Romm_number}}
+                    <br>
+                {{e.Thu}}
+                    <br>
+                    {{e.Ca}}
+                </td>
+            
+           
+            
+            {% endfor %}
+             </tr>
+            
+    
+
+        {% endif %}
+        
+        
+   
+    {% endfor %}
+</table>
+{% endblock content %}
